@@ -1,0 +1,14 @@
+参考资料。
+网上也有很多关于MULTISIM设计的资料。可参考学习。
+（参考资料附有一篇设计，可参考实施）
+百度搜索“数字秒表multisim”，有很多参考资料供大家参考。
+https://max.book118.com/html/2015/0908/24917993.shtm
+https://wenku.baidu.com/view/1b55b4cb0029bd64783e2cf5.html#
+https://wenku.baidu.com/view/133c1506e87101f69e31957e.html
+http://www.51hei.com/bbs/dpj-173337-1.html
+
+说明：
+1.首先下载multisim10.0以上版本，先学习，安装。（win10系统要安装multisim14.1较好）。
+2.下载一个multisim学习的简明教程。
+3.绘制电路图，仿真，记录数据，分析。
+4.按要求写出设计报告，重点突出自己熟悉的部分。
