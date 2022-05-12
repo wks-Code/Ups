@@ -1,0 +1,63 @@
+MAIN                                                                                                          PAGE 1
+
+                       1    $MOD51  ; This includes 8051 definitions for the Metalink assembler
+                       2    
+                       3    ; Please insert your code here.
+0000                   4    ORG                     0000H;
+0000 020040            5                            LJMP START;
+0040                   6    ORG                     0040H;
+0040 758003            7    START:  MOV P0, #03H;
+0043 7590FF            8                    MOV P1, #0FFH;
+0046 75804B            9    M1:     MOV P0, #04BH;
+0049 759003           10                    MOV P1, #03H;
+004C 7A32             11                    MOV R2, #50;
+004E 120092           12                    LCALL DELAY;
+0051 7903             13                    MOV R1, #03H;
+0053 7580C3           14    M2:     MOV P0, #0C3H;
+0056 759000           15                    MOV P1, #00H;
+0059 7A03             16                    MOV R2, #03;
+005B 120092           17                    LCALL DELAY;
+005E 7580C3           18                    MOV P0, #0C3H;
+0061 759003           19                    MOV P1, #03H;
+0064 7A03             20                    MOV R2, #03;
+0066 120092           21                    LCALL DELAY;
+0069 D9E8             22                    DJNZ R1, M2;
+006B 75803C           23    M3:             MOV P0, #3CH;
+006E 759003           24                    MOV P1, #03H;
+0071 7A32             25                    MOV R2, #50;
+0073 120092           26                    LCALL DELAY;
+0076 7903             27                    MOV R1, #03H;
+0078 75803C           28    M4:     MOV P0, #3CH;
+007B 759000           29                    MOV P1, #00H;
+007E 7A03             30                    MOV R2, #03;
+0080 120092           31                    LCALL DELAY;
+0083 75803C           32                    MOV P0, #3CH;
+0086 759003           33                    MOV P1, #03H;
+0089 7A03             34                    MOV R2, #03;
+008B 120092           35                    LCALL DELAY;
+008E D9E8             36                    DJNZ R1, M4;
+0090 80B4             37                    SJMP M1;
+0092 7B02             38    DELAY:  MOV R3, #2;
+0094 7C0A             39    D1:     MOV R4, #10;
+0096 7D1E             40    D2:     MOV R5, #30;
+0098 DDFE             41    D3:             DJNZ R5, D3;
+009A DCFA             42                    DJNZ R4, D2;
+009C DBF6             43                    DJNZ R3, D1;
+009E 22               44                    RET
+                      45    
+                      46    END
+
+VERSION 1.2k ASSEMBLY COMPLETE, 0 ERRORS FOUND
+MAIN                                                                                                          PAGE 2
+
+D1 . . . . . . . . . . . . . . .  C ADDR  0094H  
+D2 . . . . . . . . . . . . . . .  C ADDR  0096H  
+D3 . . . . . . . . . . . . . . .  C ADDR  0098H  
+DELAY. . . . . . . . . . . . . .  C ADDR  0092H  
+M1 . . . . . . . . . . . . . . .  C ADDR  0046H  
+M2 . . . . . . . . . . . . . . .  C ADDR  0053H  
+M3 . . . . . . . . . . . . . . .  C ADDR  006BH  NOT USED  
+M4 . . . . . . . . . . . . . . .  C ADDR  0078H  
+P0 . . . . . . . . . . . . . . .  D ADDR  0080H  PREDEFINED  
+P1 . . . . . . . . . . . . . . .  D ADDR  0090H  PREDEFINED  
+START. . . . . . . . . . . . . .  C ADDR  0040H  
